@@ -1,0 +1,49 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked. -->
+    <PreferenceCategory
+        android:key="pref_user"
+        android:title="User Preference">
+
+        <EditTextPreference
+            android:dialogTitle="Work Interval"
+            android:inputType="number"
+            android:key="work_interval"
+            android:summary="25 minutes"
+            android:title="Work Interval" />
+
+        <Preference
+            android:key="clear_log"
+            android:summary="Removes all the log history that you have performed from this device."
+            android:title="Clear log" />
+
+        <Preference
+            android:key="download_log"
+            android:summary="Download all the log history that you have performed from this device."
+            android:title="Download log" />
+
+        <!--Preference
+            android:key="alarmtone_sound"
+            android:summary="Choose alarm tone so that it will be played at the end of work interval."
+            android:title="Choose Alarm Tone" /-->
+        <!--<RingtonePreference-->
+            <!--android:key="alarmtone_sound"-->
+            <!--android:summary="Choose alarm tone so that it will be played at the end of work interval."-->
+            <!--android:title="Choose Alarm" />-->
+
+        <CheckBoxPreference
+            android:enabled="true"
+            android:key="is_vibration_enabled"
+            android:summary="On enabling phone will vibrate at the time of alarm"
+            android:title="Vibration" />
+
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="alarmtone_sound"
+            android:ringtoneType="notification"
+            android:title="Choose Alarm Tone"
+            android:summary="Choose the tone to play as alarm"
+            />
+
+    </PreferenceCategory>
+</PreferenceScreen>
